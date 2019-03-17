@@ -1,0 +1,127 @@
+@media screen and (max-width: 1000px) {
+  .footer-top,
+  .header {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important; }
+  .header__logo,
+  .footer-top__logo {
+    margin-bottom: 15px; }
+  .header__right {
+    -webkit-flex-wrap: wrap !important;
+        -ms-flex-wrap: wrap !important;
+            flex-wrap: wrap !important; }
+  .banner__container .header__search {
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 0; }
+  .header__search .header__search-query {
+    display: block;
+    width: 100%;
+    padding: 15px 35px 15px 30px;
+    border: 1px solid #fff; }
+  .main-nav {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important; }
+  .main-nav__link {
+    margin-bottom: 15px; }
+  .top__form {
+    text-align: center; }
+  .top__form-top {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center !important;
+    -webkit-align-items: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important; }
+  .top__form-input-wrp {
+    margin-top: 30px; }
+  .main-slider .owl-carousel .owl-nav button.owl-prev {
+    left: 0; }
+  .main-slider .owl-carousel .owl-nav button.owl-next {
+    right: 0; } }
+
+@media screen and (max-width: 768px) {
+  .banner__container .offer__ttl {
+    font-size: 26px; }
+  .top__form-ttl {
+    font-size: 22px; }
+  .header__right,
+  .footer-top__right {
+    -webkit-box-pack: center !important;
+    -webkit-justify-content: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .banner__container .header__search {
+    margin-left: 0; }
+  .banner__container .header__item,
+  .footer__container .footer-top__item {
+    margin-right: 0; }
+  .banner__container .header__item_tel {
+    margin-right: 10px; }
+  .header__item,
+  .header__btn,
+  .footer-top__item,
+  .footer-top__btn {
+    margin-bottom: 15px; }
+  .section__ttl,
+  .main-slider__ttl {
+    font-size: 25px; }
+  .banner__container .header__hamburger {
+    display: block; }
+  .main-nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: center !important;
+    -webkit-justify-content: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    background: -webkit-gradient(linear, left top, right top, from(#2c3447), to(#1a1c2c));
+    background: -webkit-linear-gradient(left, #2c3447 0%, #1a1c2c 100%);
+    background: -o-linear-gradient(left, #2c3447 0%, #1a1c2c 100%);
+    background: linear-gradient(to right, #2c3447 0%, #1a1c2c 100%);
+    opacity: 0; }
+    .main-nav.active {
+      z-index: 4;
+      opacity: 1; }
+    .main-nav.active .main-nav__logo {
+      display: block;
+      opacity: 1; } }
+
+@media screen and (max-width: 576px) {
+  .top__form-input-wrp {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important; }
+  .top__form-input-wrp input[type="tel"] {
+    margin-right: 0;
+    margin-bottom: 10px; } }
+
+@media screen and (max-width: 370px) {
+  .header__right {
+    width: 100%;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important; }
+  .banner__container .header__item_tel {
+    margin-right: 10px; } }

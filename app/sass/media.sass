@@ -1,0 +1,87 @@
+@media screen and (max-width: 1000px)
+	.footer-top,
+	.header
+		flex-direction: column !important
+	.header__logo,
+	.footer-top__logo,
+		margin-bottom: 15px
+	.header__right
+		flex-wrap: wrap !important
+	.banner__container .header__search
+		width: 100%
+		margin-top: 15px
+		margin-left: 0
+	.header__search .header__search-query
+		display: block
+		width: 100%
+		padding: 15px 35px 15px 30px
+		border: 1px solid #fff
+	.main-nav
+		flex-direction: column !important
+	.main-nav__link
+		margin-bottom: 15px
+	.top__form
+		text-align: center
+	.top__form-top
+		flex-direction: column !important
+		align-items: center !important
+	.top__form-input-wrp
+		margin-top: 30px
+	.main-slider .owl-carousel .owl-nav button.owl-prev
+		left: 0
+	.main-slider .owl-carousel .owl-nav button.owl-next
+		right: 0
+@media screen and (max-width: 768px)
+	.banner__container .offer__ttl
+		font-size: 26px
+	.top__form-ttl
+		font-size: 22px
+	.header__right,
+	.footer-top__right
+		justify-content: center !important
+		align-items: center
+	.banner__container .header__search
+		margin-left: 0
+	.banner__container .header__item,
+	.footer__container .footer-top__item
+		margin-right: 0
+	.banner__container .header__item_tel
+		margin-right: 10px
+	.header__item,
+	.header__btn,
+	.footer-top__item,
+	.footer-top__btn
+		margin-bottom: 15px
+	.section__ttl,
+	.main-slider__ttl
+		font-size: 25px
+	.banner__container .header__hamburger
+		display: block
+	.main-nav
+		position: fixed
+		width: 100%
+		height: 100%
+		justify-content: center !important
+		z-index: -1
+		left: 0
+		top: 0
+		background: linear-gradient(to right, #2c3447 0%, #1a1c2c 100%);
+		opacity: 0
+		&.active
+			z-index: 4
+			opacity: 1
+		&.active .main-nav__logo
+			display: block
+			opacity: 1
+@media screen and (max-width: 576px)
+	.top__form-input-wrp
+		flex-direction: column !important
+	.top__form-input-wrp input[type="tel"]
+		margin-right: 0
+		margin-bottom: 10px
+@media screen and (max-width: 370px)
+	.header__right
+		width: 100%
+		flex-direction: column !important
+	.banner__container .header__item_tel
+		margin-right: 10px
