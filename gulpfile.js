@@ -47,7 +47,7 @@ gulp.task('scripts', function() {
 gulp.task('css-libs', ['sass'], function() {
 	return gulp.src('app/css/libs.css') // Выбираем файл для минификации
 		.pipe(cssnano()) // Сжимаем
-		.pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
+		// .pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
 		.pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
 });
 
@@ -71,7 +71,7 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
 
 	var buildCss = gulp.src([ // Переносим библиотеки в продакшен
 		'app/css/main.css',
-		'app/css/libs.min.css'
+		'app/css/libs.css'
 		])
 	.pipe(gulp.dest('dist/css'))
 
