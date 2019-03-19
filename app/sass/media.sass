@@ -2,11 +2,16 @@
 	.footer-top,
 	.header
 		flex-direction: column !important
-	.header__logo,
-	.footer-top__logo,
+		align-items: center !important
+	.header__logo
+		display: block
+		text-align: center
+		
 		margin-bottom: 15px
-	.header__right
-		flex-wrap: wrap !important
+	.footer-top__logo
+		margin-bottom: 15px
+	.header__btn
+		margin: 15px auto 0
 	.banner__container .header__search
 		width: 100%
 		margin-top: 15px
@@ -36,8 +41,8 @@
 		font-size: 26px
 	.top__form-ttl
 		font-size: 22px
-	.header__right,
 	.footer-top__right
+		flex-direction: column !important
 		justify-content: center !important
 		align-items: center
 	.banner__container .header__search
@@ -70,9 +75,16 @@
 		&.active
 			z-index: 4
 			opacity: 1
-		&.active .main-nav__logo
-			display: block
-			opacity: 1
+			.main-nav__logo
+				display: block
+				opacity: 1
+			.main-nav__link:not(:last-child)
+				margin-bottom: 13px
+
+	.hot .hot__cnt .owl-nav button.owl-prev
+		left: 0px
+	.hot .hot__cnt .owl-nav button.owl-next
+		right: 0px
 @media screen and (max-width: 576px)
 	.top__form-input-wrp
 		flex-direction: column !important
@@ -85,3 +97,6 @@
 		flex-direction: column !important
 	.banner__container .header__item_tel
 		margin-right: 10px
+	.header__item_mail
+		margin-left: 5px
+		margin-top: 15px

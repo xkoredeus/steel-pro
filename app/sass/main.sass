@@ -211,11 +211,12 @@ button:active
 			position: absolute
 			bottom: 50%
 			margin-bottom: -25.5px
-			border: 1px solid #000
+			// border: 1px solid #000
 			padding: 10px !important
 		button.owl-prev:hover,
 		button.owl-next:hover
-			background-color: #fff
+			// background-color: #fff
+			transform: scale(.9)
 		button.owl-prev.disabled,
 		button.owl-next.disabled,
 		button.owl-prev.disabled:hover,
@@ -293,12 +294,19 @@ button:active
 		color: #00BFF3
 		&::after
 			width: 100%
+@keyframes expandBg
+	0%
+		transform: scale(1)
+		opacity: 0
+	10%
+		opacity: 1
+	100%
+		transform: scale(1.2)
 .banner
 	position: relative
-	background-position: 50% 50%
-	background-size: cover
-	background-repeat: no-repeat
 	color: #fff
+	overflow: hidden
+	
 	&::before
 		content: ''
 		position: absolute
@@ -308,10 +316,28 @@ button:active
 		right: 0
 		bottom: 0
 		left: 0
-		background-color: #000
+		background-position: 50% 50%
+		background-size: cover
+		background-repeat: no-repeat
+		background-image: url(../img/banner__bg.jpg)
+		opacity: 1
+		animation: expandBg 15s linear
+		animation-iteration-count: 1
+		animation-fill-mode: forwards
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background: linear-gradient(to right, #2c3447 0%, #1a1c2c 100%)
 		opacity: .6
 	&__container
 		position: relative
+		z-index: 1
 		.header
 			padding: 20px 0
 			&__hamburger
@@ -353,38 +379,52 @@ button:active
 						bottom: 14px
 						transform: rotate(45deg)
 						background-color: #fff
-			&__logo:hover
-				opacity: .5
-				transform: scale(.95)
+			&__logo
+				img
+					max-width: 170px
+				&:hover
+					opacity: .5
+					transform: scale(.95)
 			&__item
-				margin-right: 25px
+				margin-bottom: 15px
 				position: relative
-				font-size: 17px
-				padding-left: 30px
+				font-size: 16px
+				padding-left: 26px
 				&:hover
 					color: #00BFF3
 				&::before
 					content: ''
 					position: absolute
 					left: 0
-					top: -1px
-					width: 25px
-					height: 25px
+					top: 0px
+					width: 20px
+					height: 20px
 					background-position: 50% 50%
 					background-size: contain
 					background-repeat: no-repeat
+				&_geo
+					&::before
+						background-image: url(../img/icon__geo.png)
+				&_time
+					&::before
+						background-image: url(../img/icon__time.png)
 				&_tel
 					font-family: 'Proxima Nova Bl'
+					margin-bottom: 0
+					margin-right: 25px
 					&::before
 						background-image: url(../img/icon__tel.png)
-				&_mail::before
-					background-image: url(../img/icon__mes.png)
-					left: -2px
+				&_mail
+					margin-bottom: 0
+					&::before
+						background-image: url(../img/icon__mes.png)
+						left: -2px
 			// &__btn
 			// 	margin-right: 25px
 			&__search
 				min-height: 52px
-				margin-left: 55px
+				// margin-left: 55px
+				margin-bottom: 10px
 				position: relative
 				&-query
 					color: #fff
@@ -420,6 +460,7 @@ button:active
 				font-family: 'Proxima Nova Bl'
 				text-align: center
 				margin: 5px
+			&.active
 		.offer
 			padding: 30px 0 210px
 			&__ttl
@@ -460,22 +501,26 @@ button:active
 	&__cnt
 		margin: 0
 	&__item
+		max-width: 420px
 		min-height: 300px
+		margin-left: auto
+		margin-right: auto
 		background-position: 50% 50%
 		background-size: cover
 		background-repeat: no-repeat
 		padding: 15px 20px
 		color: #fff
 		box-shadow: inset 0px -142px 70px -44px rgba(0,0,0,0.75)
+		transition: .8s all ease
+		&:hover
+			text-decoration: none
+			transform: scale(.97)
+			color: #fff
+			box-shadow: inset 0px -142px 92px -30px rgba(11, 21, 48, 0.89)
 		&-ttl
 			font-size: 16px
 			margin-bottom: 10px
 			text-decoration: underline
-			&:hover
-				text-decoration: underline
-				transform: scale(.97)
-				color: #fff
-				opacity: .7
 		&-time
 			position: relative
 			margin-right: 40px
@@ -513,6 +558,49 @@ button:active
 			width: 70%
 			font-size: 16px
 			margin-left: 15px
+.hot
+	.hot__cnt
+		.owl-nav
+			button.owl-prev
+				left: -60px
+			button.owl-next
+				right: -60px
+	&__item
+		display: block
+		margin-left: auto
+		margin-right: auto
+		max-width: 370px
+		min-height: 300px
+		background-position: 50% 50%
+		background-size: cover
+		background-repeat: no-repeat
+		padding: 15px 20px
+		color: #fff
+		box-shadow: inset 0px -142px 70px -44px rgba(0,0,0,0.75)
+		transition: .8s all ease
+		&:hover
+			text-decoration: none
+			transform: scale(.97)
+			color: #fff
+			box-shadow: inset 0px -142px 92px -30px rgba(11, 21, 48, 0.89)
+		&-ttl
+			font-size: 16px
+			margin-bottom: 10px
+			text-decoration: underline
+		&-list
+			&-item
+				position: relative
+				padding-left: 21px
+				&::before
+					content: ''
+					position: absolute
+					left: 0
+					top: 2px
+					width: 16px
+					height: 15px
+					background: url(../img/icon__arr.svg) no-repeat 50% 50% / contain
+			&-item:not(:last-child)
+				margin-bottom: 7px
 .clients
 	&__item
 		width: 90%
@@ -584,9 +672,12 @@ button:active
 		position: relative
 		.footer-top
 			padding: 20px 0
-			&__logo:hover
-				opacity: .5
-				transform: scale(.95)
+			&__logo
+				img
+					max-width: 190px
+				&:hover
+					opacity: .5
+					transform: scale(.95)
 			&__item
 				margin-right: 25px
 				position: relative

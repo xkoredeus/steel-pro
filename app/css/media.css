@@ -5,14 +5,19 @@
     -webkit-box-direction: normal !important;
     -webkit-flex-direction: column !important;
         -ms-flex-direction: column !important;
-            flex-direction: column !important; }
-  .header__logo,
+            flex-direction: column !important;
+    -webkit-box-align: center !important;
+    -webkit-align-items: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important; }
+  .header__logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 15px; }
   .footer-top__logo {
     margin-bottom: 15px; }
-  .header__right {
-    -webkit-flex-wrap: wrap !important;
-        -ms-flex-wrap: wrap !important;
-            flex-wrap: wrap !important; }
+  .header__btn {
+    margin: 15px auto 0; }
   .banner__container .header__search {
     width: 100%;
     margin-top: 15px;
@@ -54,8 +59,12 @@
     font-size: 26px; }
   .top__form-ttl {
     font-size: 22px; }
-  .header__right,
   .footer-top__right {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
     -webkit-box-pack: center !important;
     -webkit-justify-content: center !important;
         -ms-flex-pack: center !important;
@@ -100,9 +109,15 @@
     .main-nav.active {
       z-index: 4;
       opacity: 1; }
-    .main-nav.active .main-nav__logo {
-      display: block;
-      opacity: 1; } }
+      .main-nav.active .main-nav__logo {
+        display: block;
+        opacity: 1; }
+      .main-nav.active .main-nav__link:not(:last-child) {
+        margin-bottom: 13px; }
+  .hot .hot__cnt .owl-nav button.owl-prev {
+    left: 0px; }
+  .hot .hot__cnt .owl-nav button.owl-next {
+    right: 0px; } }
 
 @media screen and (max-width: 576px) {
   .top__form-input-wrp {
@@ -124,4 +139,7 @@
         -ms-flex-direction: column !important;
             flex-direction: column !important; }
   .banner__container .header__item_tel {
-    margin-right: 10px; } }
+    margin-right: 10px; }
+  .header__item_mail {
+    margin-left: 5px;
+    margin-top: 15px; } }
