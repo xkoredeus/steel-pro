@@ -99,7 +99,7 @@
         -ms-flex-pack: center !important;
             justify-content: center !important;
     z-index: -1;
-    left: 0;
+    left: -100%;
     top: 0;
     background: -webkit-gradient(linear, left top, right top, from(#2c3447), to(#1a1c2c));
     background: -webkit-linear-gradient(left, #2c3447 0%, #1a1c2c 100%);
@@ -107,6 +107,7 @@
     background: linear-gradient(to right, #2c3447 0%, #1a1c2c 100%);
     opacity: 0; }
     .main-nav.active {
+      left: 0;
       z-index: 4;
       opacity: 1; }
       .main-nav.active .main-nav__logo {
