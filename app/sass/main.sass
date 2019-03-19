@@ -129,28 +129,28 @@ button:active
 	.fancybox-close-small
 		top: 40px
 		right: 40px
-		color: #000
+		color: #fff
 	.popup__wrp
 		display: flex
 		flex-wrap: wrap
 		align-items: center
 		justify-content: center
 		position: relative
-		&::before
-			z-index: 1
-			content: ''
-			position: absolute
-			height: 110%
-			width: 110%
-			top: -5%
-			right: -5%
-			bottom: -5%
-			left: -5%
-			z-index: 1
-			background: linear-gradient(to right, rgb(0,64,213) 0%,rgb(0,87,255) 100%)
-			opacity: .7
+		// &::before
+		// 	z-index: 1
+		// 	content: ''
+		// 	position: absolute
+		// 	height: 110%
+		// 	width: 110%
+		// 	top: -5%
+		// 	right: -5%
+		// 	bottom: -5%
+		// 	left: -5%
+		// 	z-index: 1
+		// 	background: linear-gradient(to right, rgb(0,64,213) 0%,rgb(0,87,255) 100%)
+		// 	opacity: .7
 	.popup_call__wrp
-		max-width: 320px
+		max-width: 420px
 		.popup
 			width: 100%
 			height: 100%
@@ -160,22 +160,32 @@ button:active
 			flex-direction: column
 			align-items: center
 			justify-content: flex-start
-			background-color: #fff
-			color: #000
-			padding: 20px 25px 30px
+			background: linear-gradient(to right, #2c3447 0%, #1a1c2c 100%)
+			color: #fff
+			padding: 20px 45px 30px
 			text-align: center
 			&__ttl
 				font-family: 'Proxima Nova Bl', sans-serif
 				text-transform: uppercase
 				font-size: 22px
-				margin-bottom: 30px
+				margin-bottom: 8px
+			&__subttl
+				font-family: 'Proxima Nova Rg', sans-serif
+				font-size: 16px
+				margin-bottom: 25px
+			.input__wrp
+				width: 100%
 			.form__input
 				color: #000
 				margin-bottom: 15px
+				background-color: #fff
+				border: none
+				width: 80%
+				padding: 12px 30px
 			input.form__input::placeholder
 				color: #000
 			.btn
-				width: 100%
+				width: 70%
 				margin-bottom: 15px
 			&__policy
 				margin-top: 15px
@@ -184,7 +194,8 @@ button:active
 				font-size: 12px
 				a
 					font-size: 12px 
-					color: rgb(0,64,213)
+					color: #667bb4
+					text-decoration: underline
 .owl-carousel
 	.owl-dots
 		position: absolute
@@ -480,9 +491,12 @@ button:active
 .top__form
 	background: linear-gradient(to right, rgb(44,52,71) 0%,rgb(26,28,44) 100%)
 	padding: 30px
-	margin-top: -140px
+	margin-top: -100px
 	color: #fff
 	position: relative
+	// &-wrp
+	// 	position: relative
+	// 	z-index: 2
 	&-top
 		margin-bottom: 25px
 	&-ttl
@@ -502,7 +516,7 @@ button:active
 	&__cnt
 		margin: 0
 	&__item
-		max-width: 420px
+		max-width: 470px
 		min-height: 300px
 		margin-left: auto
 		margin-right: auto
@@ -628,6 +642,7 @@ button:active
 			background-repeat: no-repeat
 			margin-bottom: 10px
 		&-ttl
+			color: #000
 			font-weight: 600
 			font-size: 18px
 			margin-bottom: 7px
@@ -643,12 +658,10 @@ button:active
 			color: #0040D5
 			&::after
 				color: #0040D5
-				right: 16px
+				right: 116px
 				top: -7px
-			&:hover
-				opacity: .8
-			&:hover::after
-				right: 8px
+		&:hover
+			opacity: .7
 .seo-text
 	text-align: center
 .footer
