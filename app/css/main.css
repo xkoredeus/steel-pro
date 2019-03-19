@@ -2960,6 +2960,7 @@ button:active {
       font-weight: 300;
       margin-bottom: 10px; }
     .news__item-btn {
+      display: inline;
       position: relative;
       font-family: 'Proxima Nova Bl';
       letter-spacing: 2px;
@@ -2967,7 +2968,7 @@ button:active {
       color: #0040D5; }
       .news__item-btn::after {
         color: #0040D5;
-        right: 116px;
+        right: 8px;
         top: -7px; }
     .news__item:hover {
       opacity: .7; }
@@ -3204,7 +3205,9 @@ button:active {
   .popup__container .popup_call__wrp .popup .form__input {
     width: 90%; }
   .popup__container {
-    padding: 50px 15px; } }
+    padding: 42px 15px; }
+  .popup__container .fancybox-close-small {
+    right: 10px; } }
 
 @media screen and (max-width: 370px) {
   .header__right {
@@ -3215,7 +3218,9 @@ button:active {
         -ms-flex-direction: column !important;
             flex-direction: column !important; }
   .banner__container .header__item_tel {
-    margin-right: 10px; }
+    margin-right: 10px; } }
+
+@media screen and (max-width: 344px) {
   .header__item_mail {
     margin-left: 5px;
     margin-top: 15px; } }

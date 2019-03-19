@@ -136,7 +136,9 @@
   .popup__container .popup_call__wrp .popup .form__input {
     width: 90%; }
   .popup__container {
-    padding: 50px 15px; } }
+    padding: 42px 15px; }
+  .popup__container .fancybox-close-small {
+    right: 10px; } }
 
 @media screen and (max-width: 370px) {
   .header__right {
@@ -147,7 +149,9 @@
         -ms-flex-direction: column !important;
             flex-direction: column !important; }
   .banner__container .header__item_tel {
-    margin-right: 10px; }
+    margin-right: 10px; } }
+
+@media screen and (max-width: 344px) {
   .header__item_mail {
     margin-left: 5px;
     margin-top: 15px; } }
