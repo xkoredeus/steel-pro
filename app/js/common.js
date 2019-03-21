@@ -50,3 +50,48 @@ $(".header__hamburger").on('click',function() {
     $('.main-nav').toggleClass("active");
     $('body').toggleClass("fixed");
 });
+
+if ( $(window).width() < 768 ) {
+  $('.works__cnt').addClass('owl-carousel');
+  $('.works__cnt').owlCarousel({
+        nav: true,
+        dots: false,
+        margin: 20,
+        navText: ["<img src='img/slider__arrow_prev.svg'>", "<img src='img/slider__arrow_next.svg'>"],
+        responsive : {
+          0   : {
+              items: 1
+          },
+          380 : {
+              items: 1
+          },
+          480 : {
+              items: 1
+          },
+          768 : {
+              items: 2
+          }
+        }
+    });
+  $('.clients__cnt').addClass('owl-carousel');
+  $('.clients__cnt').owlCarousel({
+        nav: true,
+        dots: false,
+        margin: 20,
+        navText: ["<img src='img/slider__arrow_prev.svg'>", "<img src='img/slider__arrow_next.svg'>"],
+        responsive : {
+          0   : {
+              items: 1
+          },
+          380 : {
+              items: 1
+          },
+          480 : {
+              items: 2
+          },
+          768 : {
+              items: 3
+          }
+        }
+    });
+};
