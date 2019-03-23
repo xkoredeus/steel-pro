@@ -3,7 +3,57 @@ $('.hot__cnt').owlCarousel({
       dots: false,
       items: 3,
       margin: 20,
-      navText: ["<img src='img/slider__arrow_prev.svg'>", "<img src='img/slider__arrow_next.svg'>"],
+      navText: ["<img src='img/slider__arrow_prev.png'>", "<img src='img/slider__arrow_next.png'>"],
+      responsive : {
+        0   : {
+            items: 1
+        },
+        380 : {
+            items: 1
+        },
+        480 : {
+            items: 1
+        },
+        768 : {
+            items: 2
+        },
+        1040 : {
+            items: 3
+        }
+      }
+  });
+$('.cert__cnt').owlCarousel({
+      nav: true,
+      dots: false,
+      items: 6,
+      margin: 20,
+      navText: ["<img src='img/slider__arrow_prev.png'>", "<img src='img/slider__arrow_next.png'>"],
+      responsive : {
+        0   : {
+            items: 1
+        },
+        380 : {
+            items: 1
+        },
+        480 : {
+            items: 2
+        },
+        768 : {
+            items: 3
+        },
+        1040 : {
+            items: 4
+        },
+        1200 : {
+            items: 6
+        }
+      }
+  });
+$('.videos__cnt').owlCarousel({
+      nav: true,
+      dots: false,
+      margin: 20,
+      navText: ["<img src='img/slider__arrow_prev.png'>", "<img src='img/slider__arrow_next.png'>"],
       responsive : {
         0   : {
             items: 1
@@ -57,7 +107,7 @@ if ( $(window).width() < 768 ) {
         nav: true,
         dots: false,
         margin: 20,
-        navText: ["<img src='img/slider__arrow_prev.svg'>", "<img src='img/slider__arrow_next.svg'>"],
+        navText: ["<img src='img/slider__arrow_prev.png'>", "<img src='img/slider__arrow_next.png'>"],
         responsive : {
           0   : {
               items: 1
@@ -78,7 +128,7 @@ if ( $(window).width() < 768 ) {
         nav: true,
         dots: false,
         margin: 20,
-        navText: ["<img src='img/slider__arrow_prev.svg'>", "<img src='img/slider__arrow_next.svg'>"],
+        navText: ["<img src='img/slider__arrow_prev.png'>", "<img src='img/slider__arrow_next.png'>"],
         responsive : {
           0   : {
               items: 1
@@ -87,6 +137,30 @@ if ( $(window).width() < 768 ) {
               items: 1
           },
           480 : {
+              items: 2
+          },
+          768 : {
+              items: 3
+          }
+        }
+    });
+  $('.gallery__cnt').addClass('owl-carousel');
+  $('.gallery__cnt').owlCarousel({
+        nav: true,
+        dots: false,
+        margin: 20,
+        navText: ["<img src='img/slider__arrow_prev.png'>", "<img src='img/slider__arrow_next.png'>"],
+        responsive : {
+          0   : {
+              items: 1
+          },
+          380 : {
+              items: 1
+          },
+          480 : {
+              items: 1
+          },
+          600 : {
               items: 2
           },
           768 : {
