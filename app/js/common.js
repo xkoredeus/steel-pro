@@ -123,7 +123,7 @@ $('.success-top').owlCarousel({
     margin: 10,
     URLhashListener: true,
     autoplayHoverPause: true,
-    startPosition: 'URLHash',
+    startPosition: 7,
     responsive : {
       0   : {
           items: 1
@@ -142,8 +142,7 @@ $('.success-top').owlCarousel({
       }
     }
 });
-
-$('.success-bot .success-bot__item:nth-child(1)').addClass('active');
+$('.success-bot .success-bot__item:nth-child(8)').addClass('active');
 $('.success-bot .success-bot__item').on('click', function () {
     $(this).addClass('active').siblings().removeClass('active');
 });
