@@ -116,6 +116,37 @@ $('.facility__slider').owlCarousel({
     dots: false,
     navText: ["<img src='img/slider__arrow_prev.png'>", "<img src='img/slider__arrow_next.png'>"]
 });
+$('.success-top').owlCarousel({
+    loop: false,
+    dots: false,
+    center: true,
+    margin: 10,
+    URLhashListener: true,
+    autoplayHoverPause: true,
+    startPosition: 'URLHash',
+    responsive : {
+      0   : {
+          items: 1
+      },
+      380 : {
+          items: 2
+      },
+      480 : {
+          items:3
+      },
+      768 : {
+          items: 4
+      },
+      1040 : {
+          items: 5
+      }
+    }
+});
+
+$('.success-bot .success-bot__item:nth-child(1)').addClass('active');
+$('.success-bot .success-bot__item').on('click', function () {
+    $(this).addClass('active').siblings().removeClass('active');
+});
 // tabs 
 $(document).ready(function () {
   $(".tabs__content-item").hide();
