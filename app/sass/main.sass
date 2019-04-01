@@ -1545,4 +1545,182 @@ button:active
 			&:hover
 				opacity: .8
 				transform: scale(.96)
+.news__list
+	.news
+		&__item:not(:last-child)
+			margin-bottom: 35px
+		&__item
+			max-width: 370px
+			margin-left: auto
+			margin-right: auto
+			&:hover
+				opacity: 1
+			&-img
+				height: 205px
+				margin-bottom: 0
+			&-date
+				font-size: 13px
+				padding-bottom: 10px
+				padding-left: 35px
+				color: #fff
+				position: relative
+				&::before
+					content: ''
+					position: absolute
+					left: 11px
+					top: -1px
+					width: 17px
+					height: 19px
+					background: url(../img/icon__time.png) no-repeat 50% 50% / contain
+			&-btn
+				color: #000
+				border: 1px solid #000
+				&::after
+					top: 8px
+					color: #000
+				&:hover
+					color: #fff
+					border: 1px solid #0056b3
+				&:hover
+					&::after
+						color: #fff
+			&-share
+				width: 22px
+				height: 22px
+				background: url('../img/news__item-share.svg') no-repeat 50% 50% / contain
+				margin-left: 17px
+				&:hover
+					opacity: .8
+					transform: translateX(3px)
+div.pagination
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 15px 0
+	ul.pagination
+		list-style-type: none
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-bottom: 0
+		padding: 0
+		li
+			// margin: 0 15px
+			display: flex
+			justify-content: center
+			align-items: center
+		.active
+			background-color: #0040D5
+			a
+				color: #fff
+		a
+			color: #000
+			font-family: 'Proxima Nova Bl'
+			width: 45px
+			height: 45px
+			display: flex
+			justify-content: center
+			align-items: center
+			&:hover
+				opacity: .7
+		.control
+			color: #fff
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				left: 50%
+				margin-left: -8px
+				top: 50%
+				margin-top: -5px
+				width: 16px
+				height: 10px
+			&:first-child
+				&::before
+					background: url(../img/news__pag_prev.svg) no-repeat 50% 50% / contain
+			&:last-child
+				&::before
+					background: url(../img/news__pag_next.svg) no-repeat 50% 50% / contain
+			&:hover
+				opacity: .7
+			span
+				width: 45px
+				height: 45px
+				opacity: .7
+.news-single
+	&__img
+		width: 100%
+		max-width: 770px
+		height: 205px
+		display: block
+		margin: 0 auto 25px
+		background-position: 50% 50%
+		background-size: cover
+		background-repeat: no-repeat
+	&__bot
+		padding: 20px 0
+		a
+			color: #000
+			&:hover
+				opacity: .7
+	&__back
+		padding-left: 30px
+		font-family: 'Proxima Nova Bl'
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: -2px
+			width: 22px
+			height: 22px
+			background: url(../img/news-single__back.svg) no-repeat 50% 50% / contain
+	&__date
+		padding-left: 30px
+		font-family: 'Proxima Nova Bl'
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: -2px
+			width: 22px
+			height: 22px
+			background: url(../img/news-single__time.svg) no-repeat 50% 50% / contain
+	&__share
+		width: 22px
+		height: 22px
+		background: url('../img/news__item-share.svg') no-repeat 50% 50% / contain
+		margin-left: 20px
+		&:hover
+			opacity: .8
+			transform: translateX(3px)
+	&__switch
+		&-btn
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				top: 50%
+				margin-top: -5px
+				width: 16px
+				height: 10px
+			&_prev
+				margin-right: 10px
+				padding-left: 23px
+				&::before
+					left: 0
+					background: url(../img/news__pag_prev.svg) no-repeat 50% 50% / contain
+				&:hover
+					&::before
+						transform: translateX(-3px)
+			&_next
+				margin-left: 10px
+				padding-right: 23px
+				&::before
+					right: 0
+					background: url(../img/news__pag_next.svg) no-repeat 50% 50% / contain
+				&:hover
+					&::before
+						transform: translateX(3px)
 @import "media"
