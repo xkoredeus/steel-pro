@@ -1621,7 +1621,7 @@ button:active
 		&__item:not(:last-child)
 			margin-bottom: 35px
 		&__item
-			max-width: 370px
+			// max-width: 370px
 			margin-left: auto
 			margin-right: auto
 			&:hover
@@ -1697,6 +1697,9 @@ div.pagination
 		.control
 			color: #fff
 			position: relative
+			a
+				opacity: 0
+				color: #fff
 			&::before
 				content: ''
 				position: absolute
@@ -1714,6 +1717,8 @@ div.pagination
 					background: url(../img/news__pag_next.svg) no-repeat 50% 50% / contain
 			&:hover
 				opacity: .7
+				a
+					opacity: 0
 			span
 				width: 45px
 				height: 45px

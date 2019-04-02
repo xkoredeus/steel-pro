@@ -1856,7 +1856,6 @@ button:active {
   margin-bottom: 35px; }
 
 .news__list .news__item {
-  max-width: 370px;
   margin-left: auto;
   margin-right: auto; }
   .news__list .news__item:hover {
@@ -1969,6 +1968,9 @@ div.pagination {
     div.pagination ul.pagination .control {
       color: #fff;
       position: relative; }
+      div.pagination ul.pagination .control a {
+        opacity: 0;
+        color: #fff; }
       div.pagination ul.pagination .control::before {
         content: '';
         position: absolute;
@@ -1984,6 +1986,8 @@ div.pagination {
         background: url(../img/news__pag_next.svg) no-repeat 50% 50%/contain; }
       div.pagination ul.pagination .control:hover {
         opacity: .7; }
+        div.pagination ul.pagination .control:hover a {
+          opacity: 0; }
       div.pagination ul.pagination .control span {
         width: 45px;
         height: 45px;
