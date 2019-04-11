@@ -102,6 +102,13 @@ $('.contacts__way-slider').owlCarousel({
     dots: false,
     navText: ["<img src='img/slider__arrow_prev.png'>", "<img src='img/slider__arrow_next.png'>"],
 });
+$('.port-page__top-slider').owlCarousel({
+    nav: true,
+    items: 1,
+    loop: true,
+    dots: false,
+    navText: ["<img src='img/slider__arrow_prev.png'>", "<img src='img/slider__arrow_next.png'>"],
+});
 $('.service_sub__slider').owlCarousel({
     nav: true,
     items: 1,
