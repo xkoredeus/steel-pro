@@ -397,6 +397,9 @@ button:active {
     .und:hover::after {
       width: 100%; }
 
+.upp {
+  text-transform: uppercase; }
+
 @-webkit-keyframes expandBg {
   0% {
     -webkit-transform: scale(1);
@@ -1005,6 +1008,7 @@ button:active {
       max-width: 700px;
       font-family: 'Proxima Nova Bl';
       font-size: 36px;
+      text-transform: uppercase;
       margin-bottom: 35px; }
     .banner__in .container .banner__adv {
       display: -webkit-box;
@@ -1021,7 +1025,11 @@ button:active {
           -ms-flex-align: center;
               align-items: center; }
       .banner__in .container .banner__adv-wrp {
-        max-width: 500px; }
+        max-width: 500px;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
       .banner__in .container .banner__adv-img {
         width: 100%;
         height: 70px;
@@ -1117,9 +1125,17 @@ button:active {
     margin: 15px auto; }
     .gallery__item:hover {
       opacity: .7;
-      -webkit-transform: scale(0.9);
-          -ms-transform: scale(0.9);
-              transform: scale(0.9); }
+      -webkit-transform: scale(0.95);
+          -ms-transform: scale(0.95);
+              transform: scale(0.95);
+      color: #fff; }
+  .gallery_sand .gallery__item {
+    -webkit-box-shadow: inset 0px -95px 30px -27px rgba(0, 0, 0, 0.75);
+            box-shadow: inset 0px -95px 30px -27px rgba(0, 0, 0, 0.75);
+    padding: 20px; }
+    .gallery_sand .gallery__item span:nth-child(1) {
+      font-family: 'Proxima Nova Bl';
+      text-transform: uppercase; }
 
 .cert {
   overflow: hidden; }
@@ -1862,7 +1878,9 @@ button:active {
     opacity: 1; }
   .news__list .news__item-img {
     height: 205px;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    -webkit-box-shadow: inset 0px -75px 30px -27px rgba(0, 0, 0, 0.75);
+            box-shadow: inset 0px -75px 30px -27px rgba(0, 0, 0, 0.75); }
   .news__list .news__item-date {
     font-size: 13px;
     padding-bottom: 10px;
