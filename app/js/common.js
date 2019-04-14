@@ -155,7 +155,7 @@ $('.success-bot .success-bot__item').on('click', function () {
 });
 // tabs 
 $(document).ready(function () {
-  $(".tabs__content-item").hide();
+  $(".tabs-content__item:not(:first-child)").hide();
   $(".tabs__container div.tabs__content-item.active-tab").show();
   $('ul.tabs__list > li').click(function () {
     if (!($(this).hasClass('active'))) {
@@ -250,3 +250,12 @@ if ( $(window).width() < 768 ) {
         }
     });
 };
+  //стилизация input type number
+  $( '.input__wrp_num' ).on( 'click', '.input__number-btn_minus, .input__number-btn_plus', function () {
+  var input = $( this ).siblings( '.input__number' );
+    if ( (input.val() > 1) && ($( this ).hasClass( 'input__number-btn_minus' ) ) ) {
+        input.val( +input.val() - 1 );
+    } else if ( $( this ).hasClass( 'input__number-btn_plus' ) ) {
+      input.val( +input.val() + 1 );
+    };
+  });

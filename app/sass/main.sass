@@ -64,6 +64,11 @@ button:active
 	box-shadow: 0px 12px 28px -13px rgba(0,0,0,0.64)
 	.shd:hover
 		box-shadow: 0px 16px 32px -9px rgba(0,0,0,0.69)
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	webkit-appearance: none
+input[type="number"]
+	-moz-appearance: textfield
 .btn
 	outline: none
 	font-size: 13px
@@ -102,6 +107,9 @@ button:active
 			top: 8px
 			font-family: 'Arial'
 			z-index: 2
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active
+		background-image: url(../img/banner_inner__bg.jpg)
 .list
 	&_circle
 		list-style-type: none
@@ -306,8 +314,31 @@ button:active
 	// &_tel:before
 	// 	background-image: url(../img/icon__form-tel.png)
 	// 	top: 8px
-	&:not(:last-child)
-		margin-bottom: 15px
+	// &:not(:last-child)
+	// 	margin-bottom: 15px
+.input__wrp_num
+	position: relative
+	.input__number
+		width: 100%
+		&-btn
+			position: absolute
+			width: 14px
+			height: 18px
+			right: 30px
+			background-position: 50% 50%
+			background-repeat: no-repeat
+			background-size: contain
+			background-color: #fff
+			&_plus
+				transform: scale(.9) rotate(90deg)
+				background-image: url(../img/icon__arr-2_prev.png)
+				top: 5px
+			&_minus
+				transform: scale(.9) rotate(-90deg)
+				background-image: url(../img/icon__arr-2_prev.png)
+				top: 20px
+			&:hover
+				opacity: .7
 .und
 	position: relative
 	&::before,
@@ -1027,7 +1058,7 @@ button:active
 				font-family: 'Proxima Nova Bl'
 				text-transform: uppercase
 .cert
-	overflow: hidden
+	// overflow: hidden
 	&__cnt
 		.owl-nav
 			button.owl-prev
@@ -1515,7 +1546,8 @@ button:active
 		flex-direction: column
 		align-items: center
 		.btn
-			padding-right: 64px
+			font-size: 12px
+			padding: 12px
 		&-item
 			font-size: 16px
 			width: 100%
@@ -1523,6 +1555,30 @@ button:active
 			> div:nth-child(2)
 				font-family: 'Proxima Nova Bl'
 				text-align: right
+			&-descr
+				font-family: 'Proxima Nova Rg'
+				font-size: 12px
+	&__btn
+		&-click
+			font-family: 'Proxima Nova Bl'
+			color: #404040
+			text-transform: uppercase
+			text-decoration: underline
+		&-price
+			font-family: 'Proxima Nova Bl'
+			color: #404040
+			text-transform: uppercase
+			text-decoration: underline
+			position: relative
+			padding-left: 25px
+			&::before
+				content: ''
+				position: absolute
+				left: 0px
+				top: -1px
+				width: 18px
+				height: 22px
+				background: url(../img/icon__price-btn.png) no-repeat 50% 50% / contain
 	.tabs
 		margin-top: 50px
 		margin-bottom: 40px
@@ -1531,7 +1587,7 @@ button:active
 			li
 				font-family: 'Proxima Nova Bl'
 				text-transform: uppercase
-				width: 173px
+				min-width: 173px
 				padding: 15px
 				text-align: center
 				margin-right: 2px
