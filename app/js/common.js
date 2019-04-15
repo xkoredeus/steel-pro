@@ -181,6 +181,52 @@ $(".header__hamburger").on('click',function() {
     $('.main-nav').toggleClass("active");
     $('body').toggleClass("fixed");
 });
+//стилизация input type number
+$( '.input__wrp_num' ).on( 'click', '.input__number-btn_minus, .input__number-btn_plus', function () {
+var input = $( this ).siblings( '.input__number' );
+  if ( (input.val() > 1) && ($( this ).hasClass( 'input__number-btn_minus' ) ) ) {
+      input.val( +input.val() - 1 );
+  } else if ( $( this ).hasClass( 'input__number-btn_plus' ) ) {
+    input.val( +input.val() + 1 );
+  };
+});
+$('.service_sub__colors').owlCarousel({
+    nav: true,
+    dots: false,
+    mouseDrag: false,
+    margin: 20,
+    navText: ["<img src='img/icon__arr-2_prev.png'>", "<img src='img/icon__arr-2_next.png'>"],
+    responsive : {
+      0   : {
+          items: 1
+      },
+      380 : {
+          items: 1
+      },
+      480 : {
+          items: 2
+      },
+      768 : {
+          items: 3
+      },
+      1040 : {
+          items: 4
+      },
+      1200 : {
+          items: 6
+      }
+    }
+});
+//generation images in sandwich panel
+$('.service_sub__image-big-item:not(:first-child)').hide();
+$('.service_sub__profile-item:first-child').addClass('active');
+$('.service_sub__colors .owl-item:first-child .service_sub__colors-item').addClass('active');
+$('.service_sub__colors-item').on('click', function(e){
+  e.preventDefault();
+  $('.service_sub__colors-item').removeClass('active');
+  $(this).addClass('active');
+  // if ();
+});
 
 if ( $(window).width() < 768 ) {
   $('.works__cnt').addClass('owl-carousel');
@@ -250,12 +296,3 @@ if ( $(window).width() < 768 ) {
         }
     });
 };
-  //стилизация input type number
-  $( '.input__wrp_num' ).on( 'click', '.input__number-btn_minus, .input__number-btn_plus', function () {
-  var input = $( this ).siblings( '.input__number' );
-    if ( (input.val() > 1) && ($( this ).hasClass( 'input__number-btn_minus' ) ) ) {
-        input.val( +input.val() - 1 );
-    } else if ( $( this ).hasClass( 'input__number-btn_plus' ) ) {
-      input.val( +input.val() + 1 );
-    };
-  });

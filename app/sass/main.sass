@@ -1532,6 +1532,72 @@ input[type="number"]
 		letter-spacing: 1px
 		text-transform: none
 		text-align: left
+	&__image
+		&-big
+			width: 100%
+			max-width: 430px
+			height: 330px
+			margin: 0 auto 25px
+			border: 1px solid #ccc
+			&-item
+				width: 100%
+				height: 100%
+				background-repeat: no-repeat
+				background-size: contain
+				background-position: 50% 50%
+	&__colors
+		padding-left: 40px
+		padding-right: 40px
+		// margin-top: 40px
+		&-item
+			display: flex
+			flex-direction: column
+			align-items: center
+			&:hover
+				transform: scale(.95)
+			&-img
+				width: 100%
+				height: 75px
+				margin-left: auto
+				margin-right: auto
+			&-ttl
+				margin-top: 5px
+				color: #000
+			&.active
+				.service_sub__colors-item-img
+					box-shadow: inset 0px 0px 0px 4px rgba(0,86,179,1)
+				.service_sub__colors-item-ttl
+					color: #0056b3
+	&__profile
+		display: flex
+		justify-content: center
+		margin-bottom: 25px
+		&-item
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 75px
+			margin-left: 8px
+			margin-right: 8px
+			&:hover
+				transform: scale(.95)
+			&-img
+				width: 100%
+				max-width: 75px
+				height: 75px
+				margin-left: auto
+				margin-right: auto
+				background-position: 50% 50%
+				background-size: 110%
+				background-repeat: no-repeat
+			&-ttl
+				margin-top: 5px
+				color: #000
+			&.active
+				.service_sub__profile-item-img
+					box-shadow: inset 0px 0px 0px 4px rgba(0,86,179,1)
+				.service_sub__profile-item-ttl
+					color: #0056b3
 	&__slider
 		&-item
 			width: 100%
