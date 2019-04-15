@@ -225,7 +225,11 @@ $('.service_sub__colors-item').on('click', function(e){
   e.preventDefault();
   $('.service_sub__colors-item').removeClass('active');
   $(this).addClass('active');
-  // if ();
+});
+$('.service_sub__profile-item').on('click', function(e){
+  e.preventDefault();
+  $('.service_sub__profile-item').removeClass('active');
+  $(this).addClass('active');
 });
 
 if ( $(window).width() < 768 ) {
