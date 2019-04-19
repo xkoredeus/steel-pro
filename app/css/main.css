@@ -1207,7 +1207,7 @@ input[type="number"] {
     margin-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
-    max-width: 500px; }
+    max-width: 540px; }
     .seller__ttl span {
       text-decoration: underline; }
   .seller__descr {
@@ -1777,6 +1777,7 @@ input[type="number"] {
                 transform: scale(0.95); }
       .service_sub__colors-item-img {
         width: 100%;
+        max-width: 75px;
         height: 75px;
         margin-left: auto;
         margin-right: auto; }

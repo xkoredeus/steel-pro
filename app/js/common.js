@@ -198,15 +198,6 @@ $('.service_sub__colors').owlCarousel({
     navText: ["<img src='img/icon__arr-2_prev.png'>", "<img src='img/icon__arr-2_next.png'>"],
     responsive : {
       0   : {
-          items: 1
-      },
-      380 : {
-          items: 1
-      },
-      480 : {
-          items: 2
-      },
-      768 : {
           items: 3
       },
       1040 : {
